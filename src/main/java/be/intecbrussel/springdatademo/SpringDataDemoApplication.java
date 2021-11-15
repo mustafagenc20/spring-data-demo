@@ -5,6 +5,7 @@ import be.intecbrussel.springdatademo.repositories.UserRepository;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.ConfigurableApplicationContext;
+import org.springframework.data.domain.Example;
 
 @SpringBootApplication
 public class SpringDataDemoApplication {
@@ -26,6 +27,8 @@ public class SpringDataDemoApplication {
 
         UserRepository userRepository = ctx.getBean(UserRepository.class);
         userRepository.findByLoginContaining("Ja").forEach(user -> System.out.println(user.toString()));
+
+//        userRepository.findAll(Example.of())
 
     }
 
