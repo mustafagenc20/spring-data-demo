@@ -30,7 +30,7 @@ public class SpringDataDemoApplication {
         userRepository.findByLoginContaining("Ja").forEach(user -> System.out.println(user.toString()));
 
         User user = new User();
-                .setLogin("Parameter")
+            user.setLogin("Parameter")
                 .setName("De Naam")
                 .setCake(new Cake());
 

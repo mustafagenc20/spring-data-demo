@@ -1,6 +1,8 @@
 package be.intecbrussel.springdatademo.model;
 
+import lombok.AllArgsConstructor;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 import lombok.ToString;
 
 import javax.persistence.Entity;
@@ -10,6 +12,8 @@ import javax.persistence.OneToOne;
 
 @Entity
 @Data
+@NoArgsConstructor
+@AllArgsConstructor
 @ToString(exclude = "user")
 public class Cake {
 
