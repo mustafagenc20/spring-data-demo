@@ -21,10 +21,11 @@ public class SpringDataDemoApplication {
         repository.save(new User("Piet"));
         repository.save(new User("Joris"));
         repository.save(new User("Korneel"));
-        repository.save(new User("Victoria"));
+        repository.save(new User("Jacoba"));
         repository.save(new User("Felicia"));
 
-        repository.
+        UserRepository userRepository = ctx.getBean(UserRepository.class);
+        userRepository.findByLoginContaining("Ja").forEach(user -> System.out.println(user.toString()));
 
     }
 

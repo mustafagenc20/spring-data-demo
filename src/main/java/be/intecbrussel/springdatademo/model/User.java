@@ -17,6 +17,9 @@ public class User {
     @OneToOne
     private Cake cake;
 
+    public User() {
+    }
+
     public User(String login) {
         this.login = login;
     }
