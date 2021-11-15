@@ -1,11 +1,18 @@
 package be.intecbrussel.springdatademo.model;
 
+import lombok.Data;
+import lombok.NoArgsConstructor;
+import lombok.experimental.Accessors;
+
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.OneToOne;
 
 @Entity
+@Data
+@NoArgsConstructor
+@Accessors(chain = true)
 public class User {
     @Id
     @GeneratedValue
@@ -17,13 +24,53 @@ public class User {
     @OneToOne
     private Cake cake;
 
-    public User() {
-    }
+    /*public User() {
+    }*/
 
     public User(String login) {
         this.login = login;
     }
 
+
+/*    // Builder getters and setters starts
+    public Integer getId() {
+        return id;
+    }
+
+    public User setId(Integer id) {
+        this.id = id;
+        return this;
+    }
+
+    public String getLogin() {
+        return login;
+    }
+
+    public User setLogin(String login) {
+        this.login = login;
+        return this;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public User setName(String name) {
+        this.name = name;
+        return this;
+    }
+
+    public Cake getCake() {
+        return cake;
+    }
+
+    public User setCake(Cake cake) {
+        this.cake = cake;
+        return this;
+    }
+    // Builder getters and setters ends*/
+
+    /*
     public Integer getId() {
         return id;
     }
@@ -63,5 +110,5 @@ public class User {
                 ", login='" + login + '\'' +
                 ", name='" + name + '\'' +
                 '}';
-    }
+    }*/
 }

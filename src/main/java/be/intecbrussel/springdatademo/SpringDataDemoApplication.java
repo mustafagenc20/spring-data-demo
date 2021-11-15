@@ -1,5 +1,6 @@
 package be.intecbrussel.springdatademo;
 
+import be.intecbrussel.springdatademo.model.Cake;
 import be.intecbrussel.springdatademo.model.User;
 import be.intecbrussel.springdatademo.repositories.UserRepository;
 import org.springframework.boot.SpringApplication;
@@ -27,6 +28,11 @@ public class SpringDataDemoApplication {
 
         UserRepository userRepository = ctx.getBean(UserRepository.class);
         userRepository.findByLoginContaining("Ja").forEach(user -> System.out.println(user.toString()));
+
+        User user = new User();
+                .setLogin("Parameter")
+                .setName("De Naam")
+                .setCake(new Cake());
 
 //        userRepository.findAll(Example.of())
 

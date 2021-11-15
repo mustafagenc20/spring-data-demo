@@ -1,11 +1,16 @@
 package be.intecbrussel.springdatademo.model;
 
+import lombok.Data;
+import lombok.ToString;
+
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.OneToOne;
 
 @Entity
+@Data
+@ToString(exclude = "user")
 public class Cake {
 
     @Id
