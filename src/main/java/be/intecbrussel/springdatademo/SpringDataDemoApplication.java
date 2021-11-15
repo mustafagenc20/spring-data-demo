@@ -17,10 +17,15 @@ public class SpringDataDemoApplication {
         UserRepository repository = ctx.getBean(UserRepository.class);
         System.out.println(repository);
 
-        User user =new User();
-        user.setLogin("Nog rap");
-        User saved = repository.save(user);
-        System.out.println("Saved user: " + saved.toString());
+        repository.save(new User("Jan"));
+        repository.save(new User("Piet"));
+        repository.save(new User("Joris"));
+        repository.save(new User("Korneel"));
+        repository.save(new User("Victoria"));
+        repository.save(new User("Felicia"));
+
+        repository.
+
     }
 
 }

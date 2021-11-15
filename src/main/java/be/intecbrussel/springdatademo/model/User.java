@@ -17,6 +17,10 @@ public class User {
     @OneToOne
     private Cake cake;
 
+    public User(String login) {
+        this.login = login;
+    }
+
     public Integer getId() {
         return id;
     }
